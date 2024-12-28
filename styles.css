@@ -1,0 +1,205 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+            nav ul li a:hover {
+                color: #ff6347; /* Tomato color for hover effect */
+            }
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+        nav ul.visible {
+            display: flex;
+        }
+}
+
+/* About Me Section */
+#about-me {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+    #about-me h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    #about-me p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    background-color: #eee;
+}
+
+    #projects h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #projects article {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+        #projects article figure {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+            #projects article figure img {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+    #skills h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+        #skills ul li {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1em;
+        }
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #eee;
+}
+
+    #contact h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #contact form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+        #contact form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        #contact form input,
+        #contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #contact form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+            #contact form button:hover {
+                background-color: #ff6347; /* Tomato color for hover effect */
+            }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    #projects article {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
